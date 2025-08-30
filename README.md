@@ -2,7 +2,7 @@
 Built a responsive, dynamic e-commerce website for the Meow Bites cat food brand with a cloud database system as a full stack developer using HTML, CSS and JS.
 
 # Description
-This website features multiple pages
+The project aims to provide users with a way to purchase Meow Bites products, submit support tickets, and send feedback, while provinding administrators to add, modify, and delete products. This website features multiple pages such as a home, feedback, product, support page. 
 
 # Details
 Programming Languages
@@ -20,7 +20,7 @@ Tools
 
 Database
 -----
-- Aiven Cloud: NoSQL database for storing users, trials, and donation data.
+- Aiven Cloud: MySQL database.
 
 Templating Engine
 -----
@@ -29,10 +29,10 @@ Frameworks
 - Express.js: Web framework for handling routes, middleware, and server logic.
 
 # Help
-If you have questions, suggestions, or feedback:
+If you have questions, suggestions, or feedback, feel free to contact me via:
 
 - GitHub Issues
 - Email: tala.aalhazmi@gmail.com
   
 # Authors
-Tala Alhazmi
+Full Stack Developer and Designer: Tala Alhazmi
