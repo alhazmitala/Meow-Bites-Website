@@ -1,0 +1,23 @@
+<section class="profile-container">
+  <div class="profile-info">
+    <img src="/images/CatFace.png" alt="Cat Profile Picture" class="profile-pic" />
+    <h2><%= user.name %></h2>
+    <p><%= user.email %></p>
+  </div>
+
+  <div class="profile-details">
+    <h3>Account Details</h3>
+    <p><strong>Cat's Name:</strong> <%= user.catName %></p>
+    <p><strong>Cat's Type:</strong> <%= user.catType %></p>
+    <p><strong>Preferred Food:</strong> <%= user.foodType %></p>
+  </div>
+
+  <form id="edit-profile">
+    <!-- populate fields via JS -->
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <div class="add-user-button">
+    <a href="/add-user">+ Add New User</a>
+  </div>
+</section>

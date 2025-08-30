@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%- title || 'Meow Bites' %></title>
+
+  <!-- global styles & per-page extras -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <% if (typeof extraCSS !== 'undefined') { %>
+    <link rel="stylesheet" href="<%= extraCSS %>" />
+  <% } %>
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+
+  <!-- 🏗️  main content injected here -->
+  <main class="container">
+    <%- body %>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <!-- global scripts & per-page extras -->
+  <% if (typeof extraJS !== 'undefined') { %>
+    <script src="<%= extraJS %>"></script>
+  <% } %>
+</body>
+</html>

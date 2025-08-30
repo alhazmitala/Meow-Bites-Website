@@ -1,0 +1,40 @@
+<section class="add-user-container">
+  <h2>Add New User</h2>
+
+  <!-- replace action="#" once the signup endpoint is done -->
+  <form id="add-user-form" method="POST" action="/api/users/signup">
+    <label for="full-name">Full Name:</label>
+    <input  type="text"  id="full-name" name="name"
+            required pattern="[A-Za-z ]+" title="Only letters and spaces allowed" />
+
+    <label for="email">Email:</label>
+    <input  type="email" id="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input  type="password" id="password" name="password" minlength="6" required />
+
+    <label for="cat-name">Cat's Name:</label>
+    <input  type="text"  id="cat-name" name="catName"
+            required pattern="[A-Za-z ]+" title="Only letters and spaces allowed" />
+
+    <label for="cat-type">Cat's Type:</label>
+    <select id="cat-type" name="catType" required>
+      <option value="">Select a Type</option>
+      <option>Scottish Fold</option>
+      <option>Persian</option>
+      <option>Sphynx</option>
+      <option>Other</option>
+    </select>
+
+    <label>Preferred Food Type:</label>
+    <div class="radio-group">
+      <input type="radio" id="dry-food" name="foodType" value="dry" required />
+      <label for="dry-food">Dry</label>
+
+      <input type="radio" id="wet-food" name="foodType" value="wet" />
+      <label for="wet-food">Wet</label>
+    </div>
+
+    <button type="submit">Add User</button>
+  </form>
+</section>

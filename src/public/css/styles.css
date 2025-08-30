@@ -1,0 +1,252 @@
+/* ------------------------------------------------------
+   Meow Bites – Master Stylesheet
+   ------------------------------------------------------
+   Variables  •  Base / Resets  •  Layout  •  Components
+   -------------------------------------------------- */
+
+/* 🖌  Colour & spacing scale */
+:root {
+  /* brand palette */
+  --purple:        #331832;
+  --pink:          #d81e5b;
+  --orange:        #f0544f;
+  --green:         #c6d8d3;
+  --beige:         #fdf0d5;
+  --white:         #ffffff;
+
+  /* semantic aliases */
+  --bg-primary:    var(--purple);
+  --bg-secondary:  var(--beige);
+  --text-primary:  var(--beige);
+  --text-secondary:var(--purple);
+  --btn-bg:        var(--orange);
+  --btn-bg-hover:  var(--pink);
+
+  /* sizing */
+  --gap-xs: .5rem;
+  --gap-s : 1rem;
+  --gap-m : 2rem;
+  --gap-l : 4rem;
+}
+
+/* -------------------------------------------------- */
+/* 🌐  Base & Resets                                  */
+/* -------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  line-height: 1.6;
+}
+
+/* simple utility */
+.center { text-align: center; }
+
+/* -------------------------------------------------- */
+/* 📐  Layout blocks                                  */
+/* -------------------------------------------------- */
+
+/* Header / Nav */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-s) var(--gap-m);
+  background: var(--pink);
+}
+
+.logo img { height: 50px; }
+
+nav ul {
+  display: flex;
+  gap: var(--gap-m);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover { color: var(--orange); }
+
+/* Footer */
+footer {
+  background: var(--pink);
+  color: var(--white);
+  padding: var(--gap-s);
+  text-align: center;
+}
+
+/* Main container */
+main { padding: var(--gap-l) var(--gap-m); }
+
+/* Responsive wrapper */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  width: 100%;
+}
+
+/* -------------------------------------------------- */
+/* 🏷  Components                                     */
+/* -------------------------------------------------- */
+
+/* Buttons */
+button,
+.btn {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--white);
+  border: 0;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+button:hover,
+.btn:hover { background: var(--btn-bg-hover); }
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  background: var(--bg-secondary);
+  border: 3px solid var(--green);
+  padding: var(--gap-m);
+  border-radius: 8px;
+  max-width: 500px;
+  margin: var(--gap-l) auto;
+  color: var(--text-secondary);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--pink);
+}
+
+/* Promotion cards */
+.promo-section {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: var(--gap-l) var(--gap-m);
+  text-align: center;
+}
+.promo-images {
+  display: flex;
+  gap: var(--gap-m);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.promo-images img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform .3s;
+}
+.promo-images img:hover { transform: scale(1.05); }
+
+/* Feature cards */
+.why-choose {
+  background: var(--green);
+  padding: var(--gap-l) var(--gap-m);
+}
+.features {
+  display: flex;
+  gap: var(--gap-m);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feature-box {
+  background: var(--white);
+  color: var(--text-secondary);
+  width: 260px;
+  padding: var(--gap-m);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+  text-align: center;
+  transition: transform .3s;
+}
+.feature-box:hover { transform: translateY(-5px); }
+.feature-box img { width: 100px; }
+
+/* Product grid */
+.grid_con {
+  display: grid;
+  gap: var(--gap-m);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.products {
+  background: var(--green);
+  padding: var(--gap-s);
+  border-radius: 10px;
+  text-align: center;
+}
+.products img {
+  width: 80%;
+  height: auto;
+  margin-bottom: var(--gap-s);
+}
+
+/* Profile card */
+.profile-container {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: var(--gap-m);
+  border-radius: 10px;
+  max-width: 600px;
+  margin: var(--gap-l) auto;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green);
+  display: block;
+  margin: var(--gap-s) auto;
+}
+
+/* -------------------------------------------------- */
+/* 🔄  Utilities & Helpers                            */
+/* -------------------------------------------------- */
+
+.hidden { display: none !important; }
+
+/* -------------------------------------------------- */
+/* 📱  Media Queries                                  */
+/* -------------------------------------------------- */
+
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: var(--gap-s); }
+  nav ul   { flex-direction: column; }
+  .promo-images img,
+  .feature-box { width: 90%; }
+  form { width: 95%; }
+}

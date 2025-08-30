@@ -1,0 +1,44 @@
+<section class="contact-page">
+  <h2>Submit Feedback</h2>
+<script src="/js/feedback.js"></script>
+  <form method="post" action="/api/feedback" onsubmit="return validateForm()">
+    <fieldset>
+      <legend>Please fill the following form:</legend>
+
+      <label for="in_name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter full name" required />
+
+      <label for="in_email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Please enter a valid email" required />
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" cols="30" rows="5" required></textarea>
+
+      <div class="button-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </fieldset>
+  </form>
+</section>
+
+<script>
+  /* quick inline fallback – can be removed if feedback.js duplicates this */
+  function validateForm () {
+    const inputs = document.querySelectorAll("input[required], textarea[required]");
+    let ok = true;
+    inputs.forEach(i => {
+      if (!i.value.trim()) {
+        i.style.border = "2px solid #F0544F";
+        i.reportValidity();
+        ok = false;
+      } else {
+        i.style.border = "2px solid #331832";
+      }
+    });
+    return ok;
+  }
+</script>
