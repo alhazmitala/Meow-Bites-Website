@@ -7,10 +7,10 @@ The project aims to provide users with a way to purchase Meow Bites products, su
 # Details
 Programming Languages
 -----
-- Node.js: Backend runtime used to build Tadawi’s server-side logic and APIs.
-- JavaScript: Powers both frontend and backend logic.
-- HTML: Structures content for Tadawi's interface.
-- CSS: Styles and formats responsive layouts.
+- Node.js
+- JavaScript
+- HTML
+- CSS
 
 Tools
 -----
